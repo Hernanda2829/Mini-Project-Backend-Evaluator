@@ -1,0 +1,13 @@
+Product Engineer (Backend) 2025
+
+Responsibilities:
+- Build backend services using Python/Node/Ruby
+- Implement API endpoints, database schemas, and background workers
+- Integrate LLMs and build RAG pipelines
+- Ensure resilience, retries, and proper error handling
+
+Required skills:
+- Backend frameworks (FastAPI, Django, Express)
+- Databases: PostgreSQL, MongoDB
+- Cloud: AWS/GCP/Azure, Docker, Kubernetes
+- Knowledge of LLMs, embeddings, vector DBs.

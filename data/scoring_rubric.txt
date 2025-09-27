@@ -1,0 +1,14 @@
+Scoring Rubric
+
+CV Evaluation:
+- Technical Skills (1-5)
+- Experience (1-5)
+- Achievements (1-5)
+- Culture Fit (1-5)
+
+Project Evaluation:
+- Correctness (1-5)
+- Code Quality (1-5)
+- Resilience (1-5)
+- Documentation (1-5)
+- Creativity (1-5)
