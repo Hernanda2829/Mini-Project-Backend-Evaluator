@@ -48,12 +48,18 @@ Tolong evaluasi CV ini secara singkat:
             "messages": [{"role": "user", "content": prompt}]
         }
 
-        resp = requests.post(url, headers=headers, json=data)
-        resp.raise_for_status()
-        output = resp.json()
+        try:
+            resp = requests.post(url, headers=headers, json=data, timeout=30)  # ⬅️ timeout 30 detik
+            resp.raise_for_status()
+            output = resp.json()
 
-        if "choices" not in output:
-            return {"error": "Unexpected response format", "details": output}
+            if "choices" not in output:
+                return {"error": "Unexpected response format", "details": output}
 
-        result_text = output["choices"][0]["message"]["content"]
-        return {"feedback": result_text}
+            result_text = output["choices"][0]["message"]["content"]
+            return {"feedback": result_text}
+
+        except requests.exceptions.Timeout:
+            return {"error": "Request ke OpenRouter timeout, coba lagi."}
+        except requests.exceptions.RequestException as e:
+            return {"error": f"Gagal request ke OpenRouter: {str(e)}"}
