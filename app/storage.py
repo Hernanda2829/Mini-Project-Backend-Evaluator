@@ -67,3 +67,16 @@ class JobStorage:
         c.execute("UPDATE jobs SET status = ?, updated_at = ? WHERE id = ?", (status, now, job_id))
         conn.commit()
         conn.close()
+<<<<<<< HEAD
+=======
+
+    def write_result(self, job_id: str, result: dict):
+        import time, json
+        now = int(time.time())
+        conn = self._conn()
+        c = conn.cursor()
+        c.execute("UPDATE jobs SET result = ?, status = ?, updated_at = ? WHERE id = ?",
+                  (json.dumps(result), "completed", now, job_id))
+        conn.commit()
+        conn.close()
+>>>>>>> 59a67804aec833ff347d39cfbdf8cc78a0077eb0

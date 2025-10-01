@@ -1,4 +1,5 @@
 fastapi==0.95.2
+<<<<<<< HEAD
 uvicorn[standard]==0.23.2
 pydantic==1.10.13
 
@@ -11,3 +12,14 @@ scipy==1.10.1
 scikit-learn==1.2.2
 
 lxml==4.9.3
+=======
+uvicorn[standard]==0.22.0
+sqlalchemy==1.4.50
+pydantic==1.10.7
+python-multipart==0.0.6
+python-docx==0.8.11
+PyPDF2==3.0.1
+requests==2.31.0
+scikit-learn==1.2.2
+numpy==1.26.2
+>>>>>>> 59a67804aec833ff347d39cfbdf8cc78a0077eb0
